@@ -1,0 +1,76 @@
+*, html {
+    font-family: 'Source Code Pro', monospace;
+}
+
+body{
+    margin:0;
+    padding:0;
+    text-align: center;
+    background-color: #ededed; 
+}
+
+.banner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+.banner img{
+    height: 600px;
+    width:auto;
+    margin: 0 auto;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right:0px;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.header {
+    background-color: #015EAE;
+}
+
+footer{
+    background-color: #015EAE;
+    position: fixed;
+    width: 100%;
+}
+
+footer ul a{
+    color: white;
+}
+
+footer ul a:hover{
+    color: #e37514;
+}
+
+.text h1,p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.text h1{
+    font-weight: bold;
+}
+
+.tarjeta {
+    background-color: #ebebeb;
+    border-radius: 30px;
+    padding: 30px;
+    margin: 10px;
+    -webkit-box-shadow: 17px 6px 74px 0px rgba(138,138,138,1);
+    -moz-box-shadow: 17px 6px 74px 0px rgba(138,138,138,1);
+    box-shadow: 17px 6px 74px 0px rgba(138,138,138,1);
+
+}
+
+
+
+
