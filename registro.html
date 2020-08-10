@@ -29,7 +29,7 @@
                     <p>Para iniciar el proceso de registro en la plataforma digital es necesario llenar todos los campos. Al finalizar recibiras un correo confirmando tu registro. Si necesitas ayuda, favor de contactar a <a href="mailto:miguel.arra@cess.edu.mx">miguel.arra@cess.edu.mx</a></p>
                 </div>
                 <div class="registro-form">
-                    <form id="registro-form" method="post" action="registro-form-handler.php" onclick="redirect()">
+                    <form id="registro-form" method="post" action="registro-form-handler.php" >
                         <!--
                         <label >Campus: </label> <br>
                         Mérida<input  type="radio" id="merida" name="campus" value="merida" required>
@@ -69,7 +69,7 @@
                         <br>
                         <br>
                         
-                        <input type="submit" class="form-button btn btn-primary" value="Registarse" >
+                        <input type="submit" class="form-button btn btn-primary" value="Registarse" onclick="redirect()" >
                     </form>
 
 
