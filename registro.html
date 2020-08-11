@@ -29,7 +29,7 @@
                     <p>Para iniciar el proceso de registro en la plataforma digital es necesario llenar todos los campos. Al finalizar recibiras un correo confirmando tu registro. Si necesitas ayuda, favor de contactar a <a href="mailto:miguel.arra@cess.edu.mx">miguel.arra@cess.edu.mx</a></p>
                 </div>
                 <div class="registro-form">
-                    <form id="registro-form" method="post" action="registro-form-handler.php">
+                    <form id="registro-form" method="post" action="registro-form-handler.php" >
                         <!--
                         <label >Campus: </label> <br>
                         Mérida<input  type="radio" id="merida" name="campus" value="merida" required>
@@ -62,14 +62,14 @@
                             <option value="campeche">Campus Campeche</option>
                         </select>
                         <br>
-                        <select class="form-control" name="carrera">
+                        <select class="form-control" name="carrera" >
                             <option value="">Carrera</option>             
                         </select>
                         
                         <br>
                         <br>
                         
-                        <input type="submit" class="form-button btn btn-primary" value="Registarse" >
+                        <input type="submit" class="form-button btn btn-primary" value="Registarse" onclick="redirect()" >
                     </form>
 
 
@@ -83,8 +83,8 @@
                    
             function agregarOpciones(form)
             {
-            let selec = form.tipos.options;
-            let combo = form.estilo.options;
+            let selec = form.campus.options;
+            let combo = form.carrera.options;
             combo.length = null;
             
                 if (selec[0].selected == true)
@@ -111,7 +111,11 @@
                 combo[2] = academica3;
                 }
             }
-        </script>    
+            function redirect() { 
+               location.href = "https://cess.edu.mx"; 
+            }
+        </script>
+           
     </body>
     
 </html>
