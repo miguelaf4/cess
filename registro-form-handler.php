@@ -29,18 +29,18 @@
 
 
     //mandar email
-    $email_from = 'info@cess.edu.mx';
-    $email_subject = "Registro completado";
-    $email_body = "Bienvenido a la plataforma del CESS \n\n".
-        "ID: Tu correo gmail institucional (john.doe@cess.edu.mx) \n".
-        "Contraseña: Curso-2020 \n\n".
-        "Entrar a la plataforma: https://moodle.cess.edu.mx \n";
+    // $email_from = 'info@cess.edu.mx';
+    // $email_subject = "Registro completado";
+    // $email_body = "Bienvenido a la plataforma del CESS \n\n".
+    //     "ID: Tu correo gmail institucional (john.doe@cess.edu.mx) \n".
+    //     "Contraseña: Curso-2020 \n\n".
+    //     "Entrar a la plataforma: https://moodle.cess.edu.mx \n";
     
-    $headers = "From: $email_from \r\n";
-    $headers .= "Reply-To: $email_to \r\n";
+    // $headers = "From: $email_from \r\n";
+    // $headers .= "Reply-To: $email_to \r\n";
 
-    mail($email_to,$email_subject,$email_body, $headers);
-    header("Location: registro.html" );
+    // mail($email_to,$email_subject,$email_body, $headers);
+    // header("Location: registro.html" );
 
         
     
