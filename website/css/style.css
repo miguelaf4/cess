@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #015EAE;
+    color: #E8E8E8;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* ------------------HEADER------------------------- */
+
+#mainNav i{
+    margin: auto 0;
+    padding-right: 20px;
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 10px 50px 10px 50px;
+    font-family: "Poppins";
+}
+
+.btn-primary {
+    background-color: #E8E8E8;
+    border-color: #E8E8E8;
+}
+
+.btn-primary:hover {
+    background-color: #E8E8E8;
+    box-shadow: -10px 10px 100px 0px rgba(51,51,51,0.4);
+}
+
+
+.btn span{
+    background:-webkit-linear-gradient(90deg, rgba(54,0,148,1) 0%, rgba(87,0,201,1) 24%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn span:hover {
+    background: -webkit-linear-gradient(260deg, rgba(54,0,148,1) 0%, rgba(87,0,201,1) 24%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#mainNav .logo img{
+    height:120px;
+    transition: height 0.4s;
+}
+
+#mainNav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    width: auto;
+    justify-content: space-around;
+}
+
+#mainNav ul li a{
+    text-decoration: none;
+    color: #E8E8E8;
+    transition: color 0.4s;
+    font-family: "Poppins";
+    font-size: 18px;
+}
+
+
+#mainNav span {
+    font-family: "Poppins";
+    font-size: 20px;
+}
+
+#mainNav .icon {
+    display: none;
+}
+
+
+#mainNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background-color: #015EAE;
+    transition: background 0.4s;
+    z-index: 10;
+}
+
+#mainNav .dropdown-item {
+    color: #555555;
+}
+
+
+.shadow {
+    -webkit-box-shadow: 0px 50px 70px 0px rgba(15,15,15,0.5);
+    -moz-box-shadow: 0px 50px 70px 0px rgba(15,15,15,0.5);
+    box-shadow: 0px 50px 70px 0px rgba(15,15,15,0.5);
+}
+
+
+/* ------------------END HEADER------------------------ */
+
+
+section:nth-of-type(1) {
+    margin-top: 100px;
+}
+
+section {
+    height: 700px;
+    padding:16px;
+}
+
+section:nth-of-type(even){
+    background-color: #ffffff;
+    color: #555555;
+}
+
+h1 {
+    font-family: "PT Serif", "serif";
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-family: "PT Sans", "sans";
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+/* ---------------BANNER------------------- */
+
+#banner .container{
+    margin: auto;
+}
+
+#banner .row {
+    margin-top: 100px;
+}
+
+#banner img{
+    height:100%;
+    width:100%;
+}
+
+#banner a{
+    color: #E8E8E8;
+    font-family: "PT Sans", "sans";
+    font-size: 20px;
+}
+/* 
+------------------------------------------ */
+
+/* -----------ABOUT----------------------- */
+
+#about .container {
+    margin: auto;
+}
+
+#about .row{
+    margin-top: 50px;
+}
+
+#about h1{
+    color: #CD3874;
+    padding-top: 20%;
+    line-height: 150%;
+}
+
+#about p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #555555;
+}
+
+#about img{
+    height: 250px;
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.v-line {
+    border-left: 3px solid #D6D6D6;
+    height: 500px;
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+/* --------------------------------------------- */
+footer {
+    height: 70px;
+    display: flex;
+    background-color: #015EAE;
+    color: #E8E8E8;
+}
+
+
+
+@media all
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    h1 {
+        font-size: 40px;
+    }
+
+    #mainNav {
+        padding: 0px 10px;
+    }
+
+    #about .row{
+        margin-top: 0;
+    }
+
+    #about h1{
+        margin:0;
+        padding:0;
+    }
+
+    #about {
+        height: 1000px;
+    }
+}
+
+@media all
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    #banner img{
+        height:300px;
+        width:300px;
+    }
+
+    #about .row{
+        margin-top: 0;
+    }
+
+    #about h1{
+        margin:0;
+        padding:0;
+    }
+}
