@@ -1,0 +1,5 @@
+[13-Aug-2020 21:26:48 UTC] PHP Warning:  file(registroCESS.csv): failed to open stream: No such file or directory in /home/admin/public_html/alta/php/registro-form-handler.php on line 14
+[13-Aug-2020 21:26:48 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/admin/public_html/alta/php/registro-form-handler.php on line 14
+[13-Aug-2020 21:27:26 UTC] PHP Warning:  file(registroCESS.csv): failed to open stream: No such file or directory in /home/admin/public_html/alta/php/registro-form-handler.php on line 14
+[13-Aug-2020 21:27:26 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/admin/public_html/alta/php/registro-form-handler.php on line 14
+[13-Aug-2020 21:28:11 UTC] PHP Parse error:  syntax error, unexpected '"', expecting ')' in /home/admin/public_html/alta/php/registro-form-handler.php on line 14
