@@ -30,32 +30,11 @@
                 </div>
                 <div class="registro-form">
                     <form id="registro-form" method="post" action="./php/registro-form-handler.php" >
-                        <!--
-                        <label >Campus: </label> <br>
-                        Mérida<input  type="radio" id="merida" name="campus" value="merida" required>
-                        Campeche<input type="radio" id="campeche" name="campus" value="campeche" required>
-                        -->
                         <br>
-                        <input class="form-control" type="text" name="firstname" placeholder="Nombre" required> <br>
-                        <input class="form-control" type="text" name="lastname" placeholder="Apellidos" required> <br>
-                        <input class="form-control" type="email" name="email" placeholder="Correo Electronico" required>
+                        <input class="form-control" type="text" name="firstname" onkeyup="mayus(this);" placeholder="Nombre" required> <br>
+                        <input class="form-control" type="text" name="lastname" onkeyup="mayus(this);" placeholder="Apellidos" required> <br>
+                        <input class="form-control" type="email" name="email" onkeyup="mayus(this);" placeholder="Correo Electronico" required>
                         <br>
-                        <!-- <label>Campus</label>
-                        <select class="select-form" name='campus'>
-                            <option  value="C2LCC">Campeche, 2 Cuatrimestre, Ciencias de la educación</option>
-                            <option value="C2LCC">Mérida, 5 Cuatrimestre, Psicopedagogía</option>
-                        </select>
-                        
-                        <label>Grupo:</label> <br>
-                        <select class="select-form" name='cohort1'>
-                        <option  value="C2LCC">Campeche, 2 Cuatrimestre, Ciencias de la educación</option>
-                        <option value="C2LCC">Mérida, 5 Cuatrimestre, Psicopedagogía</option>
-                        </select>
-                        
-                        <br>
-                        <br>
-                         -->
-                                               
                         <select class="form-control" name="campus" onChange="agregarOpciones(this.form)">
                             <option value="">Campus</option>
                             <option value="merida">Campus Merida</option>
@@ -65,10 +44,7 @@
                         <select class="form-control" name="carrera" >
                             <option value="">Carrera</option>             
                         </select>
-                        
                         <br>
-                        <br>
-                        
                         <input type="submit" class="form-button btn btn-primary" value="Registarse" onclick="redirect()" >
                     </form>
 
@@ -116,6 +92,9 @@
             }
             function redirect() { 
                location.href = "https://cess.edu.mx"; 
+            }
+            function mayus(e) {
+                e.value = e.value.toUpperCase();
             }
         </script>
            
