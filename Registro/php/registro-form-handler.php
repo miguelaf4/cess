@@ -21,8 +21,8 @@
     $id = $id + $rows;
 
     $form_data = array(array($id, $fname, $lname, $email_to, $campus,$carrera));
-
-    foreach ($form_data as $line) {
+    
+w    foreach ($form_data as $line) {
       fputcsv($file, $line);
     }
 
