@@ -8,6 +8,7 @@ package ordendecorreoscess;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -20,7 +21,10 @@ public class OrdenDeCorreosCESS {
         ArrayList<String> alumnos = leerDatosCSV();
         alumnos = convertirDatos(alumnos);
         formatoBaseDatos(alumnos);
+        formatoMoodle(alumnos);
     }
+    
+    
     public static ArrayList<String> leerDatosCSV(){
         String csvFile = ".\\registroNuebo.csv";
         BufferedReader br = null;
@@ -78,11 +82,32 @@ public class OrdenDeCorreosCESS {
     public static void formatoGoogle(){
         
     }
-    public static void formatoMoodle(){
-        
+    public static void formatoMoodle(ArrayList<String> nombres){
+        int numLinesBaseDatos = numLinesBaseDatos(".\\baseDatosMoodle.csv");
+        String csvFile = ".\\baseDatosMoodle.csv";
+        FileWriter flwriter = null;
+        try {
+            flwriter = new FileWriter(csvFile,true);
+            BufferedWriter bfwriter = new BufferedWriter(flwriter);
+            for(int i= numLinesBaseDatos+1;i< nombres.size();i++){
+                String[] alum = nombres.get(i).split(",");
+                bfwriter.write(nombres+"\n");
+            }
+            bfwriter.close() ;
+        } catch (IOException e) {
+                System.out.println("Unable to write");
+        } finally {
+            if (flwriter != null) {
+                try {
+                    flwriter.close();//Cierra el archivo
+                } catch (IOException e) {
+                    System.out.println("Unable to close");
+                }
+            }
+        }
     }
     public static void formatoBaseDatos(ArrayList<String> nombres) throws IOException{
-        int numLinesBaseDatos = numLinesBaseDatos();
+        int numLinesBaseDatos = numLinesBaseDatos(".\\baseDatos.csv");
         String csvFile = ".\\baseDatos.csv";
         FileWriter flwriter = null;
         try {
@@ -104,8 +129,8 @@ public class OrdenDeCorreosCESS {
             }
         }
     }
-    public static int numLinesBaseDatos(){
-        String csvFile = ".\\baseDatos.csv";
+    public static int numLinesBaseDatos(String pwd){
+        String csvFile = pwd;
         BufferedReader br = null;
         String line = "";
         int numLines=0;
@@ -129,5 +154,23 @@ public class OrdenDeCorreosCESS {
             }
         }
         return numLines;
+    }
+    public static String createFile(String nombre){
+        try {
+            String ruta = ".\\archivoUsuarios"+nombre+".csv";
+            File file = new File(ruta);
+            
+            if (!file.exists()) {
+                file.createNewFile();
+                return ruta;
+            }else{
+                System.out.println("\tEL ARCHIVO YA EXISTE");
+                return null;
+            }
+            
+        } catch (Exception e) {
+           
+        }
+        return null;
     }
 }
