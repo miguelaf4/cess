@@ -91,7 +91,7 @@ public class OrdenDeCorreosCESS {
             BufferedWriter bfwriter = new BufferedWriter(flwriter);
             for(int i= numLinesBaseDatos+1;i< nombres.size();i++){
                 String[] alum = nombres.get(i).split(",");
-                bfwriter.write(nombres+"\n");
+                bfwriter.write(alum[5]+","+alum[1]+","+alum[2]+","+alum[3]+","+"Curso-2020"+","+alum[4]+"\n");
             }
             bfwriter.close() ;
         } catch (IOException e) {
