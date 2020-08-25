@@ -26,7 +26,7 @@
             <div class="tarjeta container-fluid col-md-6">
                 <div class="text">
                     <h1>Registro para plataforma CESS</h1>
-                    <p>Para iniciar el proceso de registro en la plataforma digital es necesario llenar todos los campos. Al finalizar recibiras un correo confirmando tu registro. Si necesitas ayuda, favor de contactar a <a href="mailto:miguel.arra@cess.edu.mx">miguel.arra@cess.edu.mx</a> o <a href="mailto:alberto.garcia@cess.edu.mx">alberto.garcia@cess.edu.mx</a></</p>
+                    <p>Para iniciar el proceso de registro en la plataforma digital es necesario llenar todos los campos. Posteriormente recibiras un correo confirmando tu registro y tus datos. Si necesitas ayuda, favor de contactar a <a href="mailto:miguel.arra@cess.edu.mx">miguel.arra@cess.edu.mx</a> o <a href="mailto:alberto.garcia@cess.edu.mx">alberto.garcia@cess.edu.mx</a></</p>
                 </div>
                 <div class="registro-form">
                     <form id="registro-form" method="post" action="./php/registro-form-handler.php" >
@@ -42,7 +42,7 @@
                         </select>
                         <br>
                         <select class="form-control" name="carrera" >
-                            <option value="">Carrera</option>             
+                            <option value="">Puesto</option>             
                         </select>
                         <br>
                         <input type="submit" class="form-button btn btn-primary" value="Registarse" onclick="redirect()" >
@@ -56,7 +56,7 @@
         
         <script type="text/javascript" language="javascript">
             
-                     
+                   
             function agregarOpciones(form)
             {
             let selec = form.campus.options;
@@ -71,23 +71,19 @@
             
                 if (selec[1].selected == true)
                 {
-                let doctoradoMid = new Option('Doctorado en Educación','01P1A');
-                let educacionMid = new Option("Maestría en Educación Especial",'01P2A');
-                let docenciaMid = new Option("Maestría en Docencia Universitaria",'01P3A');
+                let doctoradoMid = new Option('Docencia','maestroMid');
+                let educacionMid = new Option("Administrativo",'adminMid');
                 combo[0] = doctoradoMid;
                 combo[1] = educacionMid;
-                combo[2] = docenciaMid;
                 
                 }
             
                 if (selec[2].selected == true)
                 {
-                let doctoradoCamp = new Option('Doctorado en Educación','02P1A');
-                let educacionCamp = new Option("Maestría en Educación Especial",'02P2A');
-                let docenciaCamp = new Option("Maestría en Docencia Universitaria",'02P3A');
+                let doctoradoCamp = new Option('Docencia','maestroCamp');
+                let educacionCamp = new Option("Administrativo",'adminCamp');
                 combo[0] = doctoradoCamp;	
                 combo[1] = educacionCamp;
-                combo[2] = docenciaCamp;
                 }
             }
             function redirect() { 

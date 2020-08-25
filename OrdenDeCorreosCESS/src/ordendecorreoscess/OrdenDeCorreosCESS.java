@@ -79,8 +79,29 @@ public class OrdenDeCorreosCESS {
         }
         return alumnos;
     }
-    public static void formatoGoogle(){
-        
+    public static void formatoGoogle(ArrayList<String> nombres){
+        int numLinesBaseDatos = numLinesBaseDatos(".\\baseDatosMoodle.csv");
+        String csvFile = ".\\baseDatosMoodle.csv";
+        FileWriter flwriter = null;
+        try {
+            flwriter = new FileWriter(csvFile,true);
+            BufferedWriter bfwriter = new BufferedWriter(flwriter);
+            for(int i= numLinesBaseDatos+1;i< nombres.size();i++){
+                String[] alum = nombres.get(i).split(",");
+                bfwriter.write(alum[5]+","+alum[1]+","+alum[2]+","+alum[3]+","+"Curso-2020"+","+alum[4]+"\n");
+            }
+            bfwriter.close() ;
+        } catch (IOException e) {
+                System.out.println("Unable to write");
+        } finally {
+            if (flwriter != null) {
+                try {
+                    flwriter.close();//Cierra el archivo
+                } catch (IOException e) {
+                    System.out.println("Unable to close");
+                }
+            }
+        }
     }
     public static void formatoMoodle(ArrayList<String> nombres){
         int numLinesBaseDatos = numLinesBaseDatos(".\\baseDatosMoodle.csv");

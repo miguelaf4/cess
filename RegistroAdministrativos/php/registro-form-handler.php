@@ -15,8 +15,8 @@
     $lname = strtoupper($lname);
     $email_to = strtoupper($email_to);
     //OPENING GILE
-    $file = fopen("../database/registroCESS.csv","a");
-    $rows = count(file("../database/registroCESS.csv"));
+    $file = fopen("../database/registroAdminCESS.csv","a");
+    $rows = count(file("../database/registroAdminCESS.csv"));
     $rows = ($rows -1) + 1;
     $id = $id + $rows;
 
